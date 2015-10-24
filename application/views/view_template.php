@@ -29,7 +29,7 @@
 </div>
 <!-- /subnavbar -->
 <div class="main">
-    <?php $this->load->view(); ?>
+    <?php $this->load->view($page); ?>
 </div>
 <!-- /main --> 
 <!-- /extra -->
