@@ -17,10 +17,19 @@ class Register extends MY_Controller {
     function __construct() {
         
         parent::__construct();
-            
+            $this->load->model('register_model');
     }
 
     function index(){
         $this->load->view('register_view');
+    }
+    
+    function auth(){
+        $email = $this->input->post('email');
+        $nama = $this->input->post('nama');
+        $password = $this->input->post('password');
+        if($this->register_model->save($nama, $email, $password)){
+            redirect('registrasi/reg_pasien');
+        }
     }
 }

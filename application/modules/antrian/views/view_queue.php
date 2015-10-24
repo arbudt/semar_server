@@ -11,7 +11,6 @@
 
                     <div class="widget-header">
                         <i class="icon-user"></i>
-                        <h3>Your Account</h3>
                     </div> <!-- /widget-header -->
 
                     <div class="widget-content">
@@ -21,7 +20,7 @@
                         <div class="tabbable">
                             <ul class="nav nav-tabs">
                                 <li>
-                                    <a href="#formcontrols" data-toggle="tab">Form Controls</a>
+                                    <a href="#formcontrols" data-toggle="tab">Form Informasi Antrian</a>
                                 </li>
                             </ul>
 
@@ -34,19 +33,27 @@
 
 
                                             <div class="control-group">											
-                                                <label class="control-label " for="firstname">Pilih Rumah Sakit</label>
-                                                <div class="controls " >
-                                                    <div />
+                                                <label class="control-label" for="firstname">Pilih Rumah Sakit</label>
+                                                <div class="controls" class="span4">
+                                                    <div class="dropdown">
+                                                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                            ...
+                                                            <span class="caret"></span>
+                                                        </button>
+                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                                            <li><a href="#">Sardjito</a></li>
+                                                            <li><a href="#">PKU Muhammadiyah</a></li> 
+                                                        </ul>
+                                                    </div>
                                                 </div> <!-- /controls -->				
                                             </div> <!-- /control-group -->
-
 
                                             <div class="control-group">											
                                                 <label class="control-label" for="firstname">Pilih Poli</label>
                                                 <div class="controls" class="span4">
                                                     <div class="dropdown">
-                                                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                                            Poli
+                                                        <button class="btn btn-default dropdown-toggle " type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                                            ...
                                                             <span class="caret"></span>
                                                         </button>
                                                         <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
@@ -103,10 +110,6 @@
 
  
 
-                                            <div class="form-actions">
-                                                <button type="submit" class="btn btn-primary">Save</button> 
-                                                <button class="btn">Cancel</button>
-                                            </div> <!-- /form-actions -->
                                         </fieldset>
                                     </form>
                                 </div>

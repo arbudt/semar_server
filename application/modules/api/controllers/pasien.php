@@ -48,7 +48,7 @@ class Pasien extends REST_Controller {
     function save_pasien_post() {
         $mpas_id = $this->post('mpas_id');
         $mrs_id = $this->input->post('mrs_id');
-        $tkunj_no_rm = $this->input->post('t_kunj_no_rm');
+        $tkunj_no_rm = $this->input->post('tkunj_no_rm');
 
         $r = $this->pasien_model->save_pasien($mpas_id, $mrs_id, $tkunj_no_rm);
         if($r == 1){

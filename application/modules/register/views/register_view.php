@@ -3,7 +3,7 @@
   
  <head>
     <meta charset="utf-8">
-    <title>Signup - Bootstrap Admin Template</title>
+    <title>Form Pendaftaran</title>
 
 	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <meta name="apple-mobile-web-app-capable" content="yes"> 
@@ -33,22 +33,19 @@
 				<span class="icon-bar"></span>
 			</a>
 			
-			<a class="brand" href="index.html">
-				Bootstrap Admin Template				
+			<a class="brand" href="">
+                            Form Pendaftaran Online
 			</a>		
 			
 			<div class="nav-collapse">
 				<ul class="nav pull-right">
-					<li class="">						
-						<a href="login.html" class="">
-							Already have an account? Login now
-						</a>
+					<li class="">		
 						
 					</li>
 					<li class="">						
-						<a href="index.html" class="">
+                                            <a href="<?php echo site_url('login');  ?>" class="">
 							<i class="icon-chevron-left"></i>
-							Back to Homepage
+							Back to login
 						</a>
 						
 					</li>
@@ -68,27 +65,22 @@
 	
 	<div class="content clearfix">
 		
-		<form action="#" method="post">
+		<form action="<?php echo site_url('register/auth')?>" method="post">
 		
-			<h1>Signup for Free Account</h1>			
+			<h1>Daftar</h1>			
 			
 			<div class="login-fields">
 				
-				<p>Create your free account:</p>
+				<p>Buat Akun Anda :</p>
 				
 				<div class="field">
-					<label for="firstname">First Name:</label>
-					<input type="text" id="firstname" name="firstname" value="" placeholder="First Name" class="login" />
+					<label for="firstname">Nama:</label>
+					<input type="text" id="nama" name="nama" value="" placeholder="nama" class="login" />
 				</div> <!-- /field -->
+				 
 				
 				<div class="field">
-					<label for="lastname">Last Name:</label>	
-					<input type="text" id="lastname" name="lastname" value="" placeholder="Last Name" class="login" />
-				</div> <!-- /field -->
-				
-				
-				<div class="field">
-					<label for="email">Email Address:</label>
+					<label for="email">Email:</label>
 					<input type="text" id="email" name="email" value="" placeholder="Email" class="login"/>
 				</div> <!-- /field -->
 				
@@ -96,22 +88,15 @@
 					<label for="password">Password:</label>
 					<input type="password" id="password" name="password" value="" placeholder="Password" class="login"/>
 				</div> <!-- /field -->
-				
-				<div class="field">
-					<label for="confirm_password">Confirm Password:</label>
-					<input type="password" id="confirm_password" name="confirm_password" value="" placeholder="Confirm Password" class="login"/>
-				</div> <!-- /field -->
+				 
 				
 			</div> <!-- /login-fields -->
 			
 			<div class="login-actions">
 				
-				<span class="login-checkbox">
-					<input id="Field" name="Field" type="checkbox" class="field login-checkbox" value="First Choice" tabindex="4" />
-					<label class="choice" for="Field">Agree with the Terms & Conditions.</label>
-				</span>
+				
 									
-				<button class="button btn btn-primary btn-large">Register</button>
+				<button class="button btn btn-primary btn-large">Daftar</button>
 				
 			</div> <!-- .actions -->
 			
