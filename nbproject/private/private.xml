@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/1"/>
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/F:/xampp/htdocs/semar_server/application/modules/dekripsi/models/dekripsi_model.php</file>
+            <file>file:/F:/xampp/htdocs/semar_server/application/modules/home/controllers/home.php</file>
+            <file>file:/F:/xampp/htdocs/semar_server/application/modules/login/models/login_model.php</file>
+            <file>file:/F:/xampp/htdocs/semar_server/application/modules/register_rs/controllers/register_rs.php</file>
+            <file>file:/F:/xampp/htdocs/semar_server/application/modules/register/controllers/register.php</file>
+            <file>file:/F:/xampp/htdocs/semar_server/application/modules/register/views/register_view.php</file>
+            <file>file:/F:/xampp/htdocs/semar_server/application/config/routes.php</file>
+            <file>file:/F:/xampp/htdocs/semar_server/application/modules/front/views/view_home.php</file>
+            <file>file:/F:/xampp/htdocs/semar_server/application/views/view_navbar_sub.php</file>
+            <file>file:/F:/xampp/htdocs/semar_server/application/modules/front/models/home_model.php</file>
+            <file>file:/F:/xampp/htdocs/semar_server/application/modules/enkripsi/models/enkripsi_model.php</file>
+            <file>file:/F:/xampp/htdocs/semar_server/application/views/login/login.php</file>
+            <file>file:/F:/xampp/htdocs/semar_server/application/config/database.php</file>
+            <file>file:/F:/xampp/htdocs/semar_server/application/views/view_user_header.php</file>
+            <file>file:/F:/xampp/htdocs/semar_server/application/views/view_footer.php</file>
+            <file>file:/F:/xampp/htdocs/semar_server/application/modules/register_rs/views/view_register_rs.php</file>
+            <file>file:/F:/xampp/htdocs/semar_server/application/modules/home/views/view_home.php</file>
+            <file>file:/F:/xampp/htdocs/semar_server/application/views/view_template.php</file>
+            <file>file:/F:/xampp/htdocs/semar_server/application/views/view_dashboard.php</file>
+            <file>file:/F:/xampp/htdocs/semar_server/application/modules/dekripsi/controllers/dekripsi.php</file>
+            <file>file:/F:/xampp/htdocs/semar_server/application/views/view_content.php</file>
+            <file>file:/F:/xampp/htdocs/semar_server/application/views/view_control_sidebar.php</file>
+            <file>file:/F:/xampp/htdocs/semar_server/application/modules/login/views/login_view.php</file>
+            <file>file:/F:/xampp/htdocs/semar_server/application/controllers/welcome.php</file>
+            <file>file:/F:/xampp/htdocs/semar_server/application/views/view_navbar.php</file>
+            <file>file:/F:/xampp/htdocs/semar_server/application/modules/home/models/home_model.php</file>
+            <file>file:/F:/xampp/htdocs/semar_server/application/config/config.php</file>
+            <file>file:/F:/xampp/htdocs/semar_server/application/modules/login/controllers/login.php</file>
+            <file>file:/F:/xampp/htdocs/semar_server/application/views/view_main.php</file>
+            <file>file:/F:/xampp/htdocs/semar_server/application/modules/dekripsi/views/view_dekripsi.php</file>
+        </group>
+    </open-files>
+</project-private>
