@@ -16,8 +16,18 @@
 <!--[if lt IE 9]>
       <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
+ 
 </head>
 <body>
+            <script src="<?php echo base_url('assets/js/jquery.js'); ?>"></script>
+        <script type="text/javascript" src="<?php echo base_url('assets/js/jquery.validate.js'); ?>"></script>
+
+        <!-- loading proses (prosegress bar) -->
+        <div id="loadingProgress" class="modal hide loadingProgress" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="false" data-backdrop="static" data-keyboard="false">
+            <div class="progress progress-striped">
+                <div class="bar" style="width: 100%;" id="labelProgressBar">sedang diproses...</div>
+            </div>
+        </div>
 <div class="navbar navbar-fixed-top">
     <?php $this->load->view('view_navbar'); ?>
   <!-- /navbar-inner --> 
@@ -41,13 +51,80 @@
 <!-- Le javascript
 ================================================== --> 
 <!-- Placed at the end of the document so the pages load faster --> 
-<script src="<?php echo base_url(); ?>/assets/js/jquery-1.7.2.min.js"></script> 
 <script src="<?php echo base_url(); ?>/assets/js/excanvas.min.js"></script> 
 <script src="<?php echo base_url(); ?>/assets/js/chart.min.js" type="text/javascript"></script> 
 <script src="<?php echo base_url(); ?>/assets/js/bootstrap.js"></script>
 <script language="javascript" type="text/javascript" src="<?php echo base_url(); ?>/assets/js/full-calendar/fullcalendar.min.js"></script>
- 
+  <script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery.validate.bootstrap.js"></script>
+      
 <script src="<?php echo base_url(); ?>/assets/js/base.js"></script> 
+
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/widgets.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/bootstrap-editable.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery-ui-1.10.3.custom.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/select2.js"></script>
+
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/bootstrap-transition.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/bootstrap-alert.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/bootstrap-modal.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/bootstrap-dropdown.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/bootstrap-scrollspy.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/bootstrap-tab.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/bootstrap-button.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/bootstrap-collapse.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/bootstrap-carousel.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/bootstrap-typeahead.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/bootstrap-affix.js"></script>
+<!--            <script type="text/javascript" src="<?php //echo base_url()              ?>assets/js/nagging-menu.js"></script>-->
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/jqBootstrapValidation.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery.tablePagination.0.5.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/bootstrap-datetimepicker.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/bootstrap-modalmanager.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery.maskedinput.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery.serialize-object.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery.validate.min.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery.validate.bootstrap.js"></script>
+        <!-- http://datatables.net/ -->
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery.dataTables.min.js"></script>
+        <!-- autosuggest input http://code.drewwilson.com/entry/autosuggest-jquery-plugin -->
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery.autoSuggest.minified.js"></script>
+        <!-- format numeral -->
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/numeral.js"></script>
+        <!-- custom dialog -->
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/bootbox.min.js"></script>
+
+        <!-- Jquery ui DO NOT REMOVE THIS LINE!-->
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery.numeric.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery-ui-sliderAccess.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery-ui-timepicker-addon.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery.masking.min.js"></script>
+        <!-- handsontable -->
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery.handsontable.full.js"></script>
+
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/tree_multiselect.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/bootstrap-tooltip.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/bootstrap-popover.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/vscroller.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/jqClock.js"></script>
+
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery.fixheadertable.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery.inputmask.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery.inputmask.date.extensions.js"></script>
+        <script type="text/javascript" src="<?php echo base_url() ?>assets/js/jquery.inputmask.numeric.extensions.js"></script>
+
+        <script type="text/javascript">
+            var jqValidateReq = <?php echo!empty($jqValidateReq) ? (int) $jqValidateReq : 0; ?>;
+            if( jqValidateReq == true) {
+                $(function () { $("input,select,textarea").not("[type=submit]").jqBootstrapValidation(); } );
+            }
+            servertime = parseFloat( $("input#servertime").val() ) * 1000;
+            $("#clock").clock({"format":"24","langSet":"simrs","timestamp":servertime});
+	
+        </script>
+
 <script>     
 
         var lineChartData = {
@@ -71,7 +148,6 @@
 
         }
 
-        var myLine = new Chart(document.getElementById("area-chart").getContext("2d")).Line(lineChartData);
 
 
         var barChartData = {
@@ -169,5 +245,28 @@
         });
       });
     </script><!-- /Calendar -->
+
+     <script>
+        function showPopOver(){
+            $('.brand').popover('show');
+        }
+            
+        function hidePopOver(){
+            $('.brand').popover('hide');
+        }
+            
+        $(document).ready(function(){
+            $('.loadingProgress').modal('hide');
+        });
+            
+        function showProgressBar(msg){
+            $('#labelProgressBar').html(msg+'...');
+            $('.loadingProgress').modal('show');
+        }
+            
+        function hideProgressBar(){
+            $('.loadingProgress').modal('hide');
+        }
+    </script>
 </body>
 </html>
