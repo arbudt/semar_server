@@ -41,7 +41,7 @@ if (!defined('BASEPATH'))
   |
  */
 
-$route['default_controller'] = "front/home";
+$route['default_controller'] = "registrasi/reg_pasien";
 $route['404_override'] = '';
 
 
