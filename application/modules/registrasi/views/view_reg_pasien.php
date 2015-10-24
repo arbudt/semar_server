@@ -42,7 +42,7 @@
                         <td>
                             <div id="datePickerTanggal" class="input-append date">
                                 <input class="input input-small" data-format="dd-MM-yyyy" type="text" name="tanggalLahir" id="tanggalLahir" value="<?php echo tglSekarang(); ?>"required="true" >
-                                <span class="add-on">
+                                <span  class="add-on">
                                     <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
                                 </span>
                             </div>

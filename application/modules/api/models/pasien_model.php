@@ -42,8 +42,8 @@ class Pasien_model extends MY_Model{
             'mrs_id' => $mrs_id,
             'tkunj_no_rm' => $tkun_no_id
         );
-        print_r($data);die;
         $id = $this->db->insert('trans_kunjungan', $data);
-        return $id > 0;
+        if($id) return 1;
+        else return 0;
     }
 }

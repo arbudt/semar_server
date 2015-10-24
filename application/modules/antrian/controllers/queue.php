@@ -26,7 +26,7 @@ class Queue extends MY_Controller {
     function index() {
         $result = $this->queue_model->get_rumahsakit_list();
 
-        $data['page'] = "queue/view_queue";
+        $data['page'] = "antrian/view_queue";
         $data['data'] = $result;
         $this->load->view('view_template', $data);
     }

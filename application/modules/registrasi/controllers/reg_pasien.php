@@ -4,10 +4,10 @@ if (!defined('BASEPATH'))
     exit('No direct script access allowed');
 
 class Reg_pasien extends MY_Controller {
-
     function __construct() {
         parent::__construct();
         $this->load->model('registrasi/reg_pasien_model');
+
     }
 
     function index() {
@@ -19,6 +19,15 @@ class Reg_pasien extends MY_Controller {
         $this->load->view('view_template', $data);
     }
 
+    public function get_pasien($no_rm_nasional=''){
+        
+        $url = $this->REST_PASIEN_SERVER . '/' .$no_rm_nasional;
+                $header = array(
+            'Accept' => 'application/json'
+        );
+         $data = Requests::get($url, $header);
+         print_r($data);
+    }
     /*
      *
      */
@@ -285,8 +294,10 @@ class Reg_pasien extends MY_Controller {
         echo 'sukses';
     }
 
+    
     public function test(){
         echo dropDownTest();
     }
 
+    
 }

@@ -29,4 +29,10 @@ class queue_model extends CI_Model{
         $q = $this->db->get('mst_rumah_sakit');
         return $q->num_rows() > 0 ? $q->result() : null;
     }
+    function get_pasien($no_rm = ''){
+        $q = $this->db->get('mst_pasien')
+                ->where('mpas_id', $no_rm)
+                ->get();
+        return $q->num_rows()> 0 ? $q->row() : null;
+    }
 }

@@ -34,26 +34,16 @@
 
 
                                             <div class="control-group">											
-                                                <label class="control-label" for="firstname">Pilih Rumah Sakit</label>
-                                                <div class="controls">
-                                                    <div class="dropdown">
-                                                        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                                            Rumah Sakit
-                                                            <span class="caret"></span>
-                                                        </button>
-                                                        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                                            <li><a href="#">PKU Muhammadiya</a></li>
-                                                            <li><a href="#">RSUP Dr. Sardjito</a></li>
-                                                            <li><a href="#">RSUD Kota Yogyakarta</a></li> 
-                                                        </ul>
-                                                    </div>
+                                                <label class="control-label " for="firstname">Pilih Rumah Sakit</label>
+                                                <div class="controls " >
+                                                    <div />
                                                 </div> <!-- /controls -->				
                                             </div> <!-- /control-group -->
 
 
                                             <div class="control-group">											
                                                 <label class="control-label" for="firstname">Pilih Poli</label>
-                                                <div class="controls">
+                                                <div class="controls" class="span4">
                                                     <div class="dropdown">
                                                         <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                                             Poli
@@ -85,7 +75,7 @@
                                                                 <div class="span4">
                                                                     <div class="widget widget-nopad">
                                                                         <div class="widget-header"> <i class="icon-list-alt"></i>
-                                                                            <h3> Informasi ANtrian Poli</h3>
+                                                                            <h3> Informasi Antrian Poli</h3>
                                                                         </div>
                                                                         <!-- /widget-header -->
                                                                         <div class="widget-content">
