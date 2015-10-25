@@ -1,37 +1,23 @@
-
 <div class="main-inner">
-
     <div class="container">
-
         <div class="row">
-
             <div class="span12">      		
-
                 <div class="widget ">
-
                     <div class="widget-header">
                         <i class="icon-user"></i>
                     </div> <!-- /widget-header -->
-
                     <div class="widget-content">
-
-
-
                         <div class="tabbable">
                             <ul class="nav nav-tabs">
                                 <li>
                                     <a href="#formcontrols" data-toggle="tab">Form Informasi Antrian</a>
                                 </li>
                             </ul>
-
                             <br>
-
                             <div class="tab-content">
                                 <div class="tab-pane active" id="formcontrols">
                                     <form id="edit-profile" class="form-horizontal">
                                         <fieldset>
-
-
                                             <div class="control-group">											
                                                 <label class="control-label" for="firstname">Pilih Rumah Sakit</label>
                                                 <div class="controls" class="span4">
@@ -71,8 +57,6 @@
                                                     <input type="text" class="span4" id="text" value="Dokter OZ">
                                                 </div> <!-- /controls -->				
                                             </div> <!-- /control-group -->
-
-
                                             <div class="control-group">											
                                                 <label class="control-label" for="lastname">Poli</label>
                                                 <div class="controls">
@@ -91,10 +75,9 @@
                                                                                     <div id="big_stats" class="cf">
                                                                                         <div class="stat"> <span class="value">851</span> </div>
                                                                                         <!-- .stat -->
-                                                                                 </div>
+                                                                                    </div>
                                                                                 </div>
                                                                                 <!-- /widget-content --> 
-
                                                                             </div>
                                                                         </div>
                                                                     </div> 
@@ -107,30 +90,14 @@
                                                     </div>
                                                 </div> <!-- /controls -->				
                                             </div> <!-- /control-group -->
-
- 
-
                                         </fieldset>
                                     </form>
                                 </div>
-
                             </div>
-
-
-
-
-
                         </div> <!-- /widget-content -->
-
                     </div> <!-- /widget -->
-
                 </div> <!-- /span8 -->
-
-
-
-
             </div> <!-- /row -->
-
         </div> <!-- /container -->
-
     </div> <!-- /main-inner -->
+</div>
