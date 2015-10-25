@@ -22,7 +22,7 @@ class Register_model extends MY_Model {
         $data = array(
             'nama' => $name,
             'email' => $email,
-            'password' => $password
+            'password' => md5($password)
         );
                $q = $this->db->insert('user', $data);
                if($q)

@@ -18,8 +18,8 @@ class Login_model extends MY_Model{
     }
     
     function auth($email, $password){
-        $q = $this->db->from('mst_pasien')->where('mpas_email', $email)
-                ->where('mpas_password', md5($password))->get();
+        $q = $this->db->from('user')->where('email', $email)
+                ->where('password', md5($password))->get();
         return $q->num_rows() > 0 ? $q->row() : null;
     }
 

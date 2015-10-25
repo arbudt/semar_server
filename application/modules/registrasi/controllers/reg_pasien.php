@@ -17,6 +17,9 @@ class Reg_pasien extends MY_Controller {
         $data['menuDescription'] = 'Pendaftaran data pasien';
 
         $this->load->view('view_template', $data);
+        if($this->session->userdata('nama') == null){
+            redirect('login');
+        }
     }
 
     public function get_pasien($no_rm_nasional=''){

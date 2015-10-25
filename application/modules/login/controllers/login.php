@@ -35,8 +35,18 @@ class Login extends MY_Controller{
         $user = $this->login_model->auth($email, $password);
         if(empty($user)){ 
         }else{ 
-            redirect('home');
+            $this->session->set_userdata(array(
+				'nama' => $user->nama,
+				'email' => $user->email
+			));
+            redirect('registrasi/reg_pasien');
         }
+    }
+    
+    
+    function logout(){
+        $this->session->sess_destroy();
+        redirect('registrasi/reg_pasien');
     }
 
 }

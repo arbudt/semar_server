@@ -75,13 +75,13 @@
 				
 				<div class="field">
 					<label for="firstname">Nama:</label>
-					<input type="text" id="nama" name="nama" value="" placeholder="nama" class="login" />
+                                        <input type="text" required="true"id="nama" name="nama" value="" placeholder="nama" class="login" />
 				</div> <!-- /field -->
 				 
 				
 				<div class="field">
 					<label for="email">Email:</label>
-					<input type="text" id="email" name="email" value="" placeholder="Email" class="login"/>
+                                        <input type="email" required="true"id="email" name="email" value="" placeholder="Email" class="login"/>
 				</div> <!-- /field -->
 				
 				<div class="field">

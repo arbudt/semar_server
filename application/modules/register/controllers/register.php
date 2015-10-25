@@ -29,6 +29,10 @@ class Register extends MY_Controller {
         $nama = $this->input->post('nama');
         $password = $this->input->post('password');
         if($this->register_model->save($nama, $email, $password)){
+            			$this->session->set_userdata(array(
+				'nama' => $nama,
+				'email' => $email
+			));
             redirect('registrasi/reg_pasien');
         }
     }
