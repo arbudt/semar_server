@@ -7,6 +7,9 @@
         height: 40px;
         resize: none       
     }
+    .tanggal{
+        margin-top: 9px;
+    }
 </style>
 
 <!-- HTML botton TOP -->
@@ -41,7 +44,7 @@
                         <td class="labelField">Tanggal Lahir</td>
                         <td>
                             <div id="datePickerTanggal" class="input-append date">
-                                <input class="input input-small" data-format="dd-MM-yyyy" type="text" name="tanggalLahir" id="tanggalLahir" value="<?php echo tglSekarang(); ?>"required="true" >
+                                <input class="input input-small tanggal" data-format="dd-MM-yyyy" type="text" name="tanggalLahir" id="tanggalLahir" value="<?php echo tglSekarang(); ?>"required="true" >
                                 <span  class="add-on">
                                     <i data-time-icon="icon-time" data-date-icon="icon-calendar"></i>
                                 </span>

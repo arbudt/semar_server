@@ -13,81 +13,69 @@
  */
 require APPPATH . 'libraries/REST_Controller.php';
 
-class Rekam_medis extends MY_Controller{
+class Rekam_medis extends REST_Controller {
+
     //put your code here
-    
-    public function data_get(){
+
+    public function data_get() {
         
     }
+
     public function __construct() {
         parent::__construct();
-        $this->load->library('rest');
-        Requests::register_autoloader();
+        $this->load->model('rekam_medis_model');
     }
-    
-    public function getrekam_medis_post(){
+
+    public function getrekam_medis_post() {
         $pos_array = $this->input->post('data');
         echo $pos_array;
         die;
-                
-//                            try {
-//                        $request = Requests::get($url, $header);
-//                        if (!empty($request->status_code)) {
-//                            if ($request->status_code == '200') {
-//                                if (!empty($request->body)) {
-//                                    $response = json_decode($request->body);
-//                                    if ($response->metaData->code == '200') {
-//                                        if (!empty($response->response)) {
-//                                            $jenisKelamin = strval($response->response->pesertasep->kelamin);
-//                                            $namaPasien = strval($response->response->pesertasep->nama);
-//                                            $noKartu = strval($response->response->pesertasep->noKartuBpjs);
-//                                            $noRm = strval($response->response->pesertasep->noMr);
-//                                            $noRujukan = strval($response->response->pesertasep->noRujukan);
-//                                            $tglLahir = strval($response->response->pesertasep->tglLahir);
-//                                            $tglPelayanan = strval($response->response->pesertasep->tglPelayanan);
-//                                            $pelayanan = strval($response->response->pesertasep->tktPelayanan);
-//                                            $data['data']['namaPasien'] = $namaPasien;
-//                                            $data['data']['noRm'] = $noRm;
-//                                            $data['data']['noKartu'] = $noKartu;
-//                                            $data['data']['tanggalLahir'] = $tglLahir;
-//                                            $data['data']['tanggalPelayanan'] = $tglPelayanan;
-//                                            $data['data']['noRujukan'] = $noRujukan;
-//                                            $data['data']['kodeJenisKelamin'] = $jenisKelamin;
-//                                            if (strtoupper($jenisKelamin) == 'L') {
-//                                                $data['data']['jenisKelamin'] = 'Laki-laki';
-//                                            } else {
-//                                                $data['data']['jenisKelamin'] = 'Perempuan';
-//                                            }
-//                                            $data['data']['kodePelayanan'] = $pelayanan;
-//                                            if (intval($pelayanan) == 2) {
-//                                                $data['data']['jenisPelayanan'] = 'Rawat Jalan';
-//                                            } else {
-//                                                $data['data']['jenisPelayanan'] = 'Rawat Inap';
-//                                            }
-//                                        } else {
-//                                            if (!empty($response->metaData)) {
-//                                                $data['message'] = 'No SEP tidak ditemukan';
-//                                            } else {
-//                                                $data['message'] = 'Alamat service tidak ditemukan. Hubungi Administrator';
-//                                            }
-//                                        }
-//                                    } else {
-//                                        $data['message'] = 'No SEP tidak ditemukan';
-//                                    }
-//                                } else {
-//                                    $data['message'] = 'Tidak ada respons dari service BPJS. Hubungi Administrator';
-//                                }
-//                            } else {
-//                                $data['message'] = 'No SEP salah';
-//                            }
-//                        } else {
-//                            $data['message'] = 'Respons dari service BPJS tidak sesuai format. Hubungi Administrator';
-//                        }
-//                    } catch (Exception $exc) {
-//                        $data['report'] .= $exc->getMessage();
-//                        $data['report'] .= $exc->getTraceAsString();
-//                        $data['message'] = 'Tidak terhubung dengan service BPSJ. Hubungi Administrator';
-//                    }
     }
-    
+
+    public function getrumahsakit_get($no_rm_local = '') {
+        $pasien = $this->rekam_medis_model->getdataRs($no_rm_local);
+        if (empty($pasien)) {
+            $data['status'] = 0;
+        } else {
+            $data['data'] = $pasien;
+            $data['status'] = 1;
+        }
+        $this->response($data);
+    }
+
+    public function getpostrekamedik_post() {
+        $mrs_id = $this->input->post('mrs_id');
+        $tkunj_no_rm = $this->input->post('tkunj_no_rm');
+        $dataResult = array();
+        if ($mrs_id) {
+            $i = 0;
+            while ($i < count($mrs_id)) {
+                $kodeRs = $mrs_id[$i];
+                $noRmLocal = trim($tkunj_no_rm[$i]);
+                if (!empty($noRmLocal)) {
+                    $url = 'http://localhost/semar_client/index.php/api/rekammedis_client/get_rekammedis/' . $noRmLocal;
+
+                    $curl_handle = curl_init();
+                    curl_setopt($curl_handle, CURLOPT_URL, $url);
+                    curl_setopt($curl_handle, CURLOPT_CUSTOMREQUEST, 'GET');
+                    curl_setopt($curl_handle, CURLOPT_RETURNTRANSFER, 1);
+
+                    $buffer = curl_exec($curl_handle);
+                    curl_close($curl_handle);
+
+                    $result = json_decode($buffer);
+
+                    if (!empty($result->data)) {
+                        $row = $result->data;
+                        $dataResult = $row;
+                    }
+                }
+                $i++;
+            }
+        }
+        $data['data'] = $dataResult;
+        $data['status'] = 1;
+        $this->response($data);
+    }
+
 }
